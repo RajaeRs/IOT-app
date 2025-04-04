@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app-service
+  namespace: dev
+spec:
+  selector:
+    app: my-app  # Make sure this matches the label in your Deployment
+  ports:
+    - protocol: TCP
+      port: 80        # The external port for accessing the app
+      targetPort: 5000  # The port where your Flask app is running inside the container
+  type: LoadBalancer  # This exposes the service externally
