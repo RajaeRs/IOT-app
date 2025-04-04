@@ -4,11 +4,10 @@ metadata:
   name: my-app-service
   namespace: dev
 spec:
+  type: LoadBalancer
   selector:
     app: my-app
   ports:
     - protocol: TCP
-      port: 5000
+      port: 80
       targetPort: 5000
-      nodePort: 30000
-  type: NodePort
