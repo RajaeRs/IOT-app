@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: rajaers/my-app:v2
+          image: rajaers/my-app:v1
           ports:
             - containerPort: 5000
